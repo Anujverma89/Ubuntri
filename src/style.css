@@ -1,0 +1,110 @@
+#mybox {
+    background-color: #3498db;
+    /* Light blue background color */
+    padding: 20px;
+    /* Padding inside the box */
+    /* Shadow for depth */
+    color: white;
+    /* Text color */
+    font-size: 18px;
+    /* Font size for text */
+    background-color: red;
+}
+
+#mybox>* {
+    margin: 10px;
+    /* Margin for child widgets */
+}
+
+window {
+    /* 100% of the viewport height */
+    margin: 0;
+    background-color: #202840;
+    /* No margin for the window */
+}
+
+#button-style {
+    background-color: red;
+}
+
+#right_content {
+    background-color: #0e1427;
+}
+
+#learn_box {
+    background-color: #a7baf7;
+    color: black;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+#learn_box:hover,
+#troubleshoot_box:hover,
+#installation_box:hover {
+    background-color: #0e1427;
+    color: white;
+    transition: .4s ease-in-out;
+}
+
+#troubleshoot_box {
+    background-color: #a7baf7;
+    color: black;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+#installation_box {
+    background-color: #a7baf7;
+    color: black;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+#menu_bar {
+    background-color: red;
+}
+
+#intro_text_one {
+    color: white;
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#intro_text_one:hover {
+    color: cornflowerblue;
+    transition: .3s ease-in-out;
+}
+
+#intro_text_two {
+    color: #b90191;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+#intro_text_two:hover {
+    color: white;
+    transition: .3s ease-in-out;
+}
+
+#search_entry {
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+#search_button_one {
+    background: #a7baf7;
+    color: black;
+    font-weight: bold;
+}
+
+#search_button_one:hover {
+    background: #122253;
+    color: white;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+}

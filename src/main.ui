@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+
+  <!-- Main Window -->
+  <object class="GtkApplicationWindow" id="main_window">
+    <property name="title">Ubuntri</property>
+    <property name="default-width">1000</property>
+    <property name="default-height">600</property>
+
+    <!-- main container -->
+    <child> 
+      <object class="GtkBox" id="main_box">
+          <property name="orientation">horizontal</property>
+          <property name="spacing">0</property>
+          <!-- Left Panel (Sidebar) -->
+          <child>
+            <object class="GtkBox" id="sidebar_box">
+              <property name="orientation">vertical</property>
+              <property name="width-request">250</property>
+              <property name="hexpand">False</property>
+              <property name="vexpand">True</property>
+              <style>
+                <class name="sidebar-style"/>
+              </style>
+              
+              <!-- Learn Ubuntu Button -->
+              <child>
+                <object class="GtkBox" id="learn_button_box">
+                  <property name="orientation">vertical</property>
+                  <property name="halign">center</property>
+                  <property name="valign">center</property>
+                  <property name="height-request">250</property>
+                  <property name="margin-bottom">20</property>
+                  <property name="margin-top">10</property>
+                  <property name="spacing">10</property>
+                  <!-- GtkImage -->
+                  <child>
+                    <object class="GtkImage" id="logo_image">
+                      <property name="file">../data/logo.png</property>
+                      <property name="width-request">50</property>
+                      <property name="height-request">50</property>
+                      <property name="visible">True</property>
+                      <property name="vexpand">True</property>
+                      <property name="hexpand">True</property>
+                      <property name="halign">center</property>
+                      <property name="valign">end</property>
+                    </object>
+                  </child>
+
+                  <!-- GtkLabel -->
+                  <child>
+                    <object class="GtkLabel" id="Label_learn">
+                      <property name="label">Ubuntri Assistant</property>
+                      <property name="visible">True</property>
+                      <property name="width-request">230</property>
+                      <property name="halign">center</property>
+                      <property name="valign">start</property>
+                      <property name="vexpand">True</property>
+                      <property name="hexpand">True</property>
+                    </object>
+                  </child>
+                </object>
+              </child>
+
+
+
+              <!-- Trouble Shoot Button -->
+              <child>
+                <object class="GtkBox" id="troubleshoot_box">
+                  <property name="orientation">vertical</property>
+                  <property name="halign">center</property>
+                  <property name="valign">center</property>
+                  <property name="height-request">250</property>
+                  <property name="margin-bottom">20</property>
+                  <property name="spacing">10</property>
+                  <child>
+                    <object class="GtkImage" id="troubleshoot_image">
+                      <property name="file">../data/troubleshoot.png</property>
+                      <property name="width-request">50</property>
+                      <property name="height-request">50</property>
+                      <property name="visible">True</property>
+                      <property name="vexpand">True</property>
+                      <property name="hexpand">True</property>
+                      <property name="halign">center</property>
+                      <property name="valign">end</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkLabel" id="Label_trouble">
+                      <property name="label">Troubleshoot</property>
+                      <property name="visible">True</property>
+                      <property name="width-request">230</property>
+                      <property name="halign">center</property>
+                      <property name="valign">start</property>
+                      <property name="vexpand">True</property>
+                      <property name="hexpand">True</property>
+                    </object>
+                  </child>
+                </object>
+              </child>
+
+              <!-- Installatio process -->
+              <child>
+                <object class="GtkBox" id="installation_box">
+                  <!-- <property name="label">Learn Ubuntu</property> -->
+                  <property name="orientation">vertical</property>
+                  <property name="halign">center</property>
+                  <property name="valign">center</property>
+                  <property name="height-request">250</property>
+                  <property name="margin-bottom">20</property>
+                  <property name="spacing">10</property>
+                  <child>
+                    <object class="GtkImage" id="installation_image">
+                      <property name="file">../data/install_icon.png</property>
+                      <property name="width-request">50</property>
+                      <property name="height-request">50</property>
+                      <property name="visible">True</property>
+                      <property name="vexpand">True</property>
+                      <property name="hexpand">True</property>
+                      <property name="halign">center</property>
+                      <property name="valign">end</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkLabel" id="Label_installation">
+                      <property name="label">Software Installation</property>
+                      <property name="visible">True</property>
+                      <property name="width-request">230</property>
+                      <property name="halign">center</property>
+                      <property name="valign">start</property>
+                      <property name="vexpand">True</property>
+                      <property name="hexpand">True</property>
+                    </object>
+                  </child>
+                </object>
+              </child>
+              
+
+          
+
+            </object>
+          </child>
+
+          <!-- Right Panel (Main Content Area) -->
+          <child>
+            <object class="GtkBox" id="ubuntri_content_box">
+              <property name="orientation">vertical</property>
+              <property name="hexpand">True</property>
+              <property name="vexpand">True</property>
+              <!-- Search content Placeholder -->
+              <child>
+                <object class="GtkBox" id="search_content_placeholder">
+                  <property name="orientation">horizontal</property>
+                  <property name="hexpand">True</property>
+                  <property name="height-request">50</property>
+                  <property name="halign">center</property>
+                  <property name="valign">center</property>
+                  <child>
+                    <object class="GtkSearchEntry" id="search_entry">
+                      <property name="placeholder-text">Search...</property>
+                      <property name="halign">center</property>
+                      <property name="valign">center</property>
+                    </object>
+                  </child>
+                </object>
+              </child>
+
+              <!-- main content placeholder -->
+
+              <child>
+                <object class="GtkBox" id="main_content_placeholder">
+                  <property name="orientation">vertical</property>
+                  <property name="hexpand">True</property>
+                  <property name="vexpand">True</property>
+                  <property name="halign">center</property>
+                  <property name="valign">center</property>
+                  <property name="spacing">10</property>   
+
+                  <child>
+                    <object class="GtkBox" id="label_text_box">
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                      <!-- label 1 -->
+                      <child>
+                         <object class="GtkLabel" id="Gtk_label0">
+                          <property name="label">Ubuntri ~</property>
+                          <property name="visible">True</property>
+                          <property name="vexpand">True</property>
+                          <property name="hexpand">True</property>
+                        </object>
+                      </child>
+
+                        <!-- label 2 -->
+                      <child>
+                        <object class="GtkLabel" id="Gtk_label1">
+                          <property name="label"> Ask anything....</property>
+                          <property name="visible">True</property>
+                          <property name="vexpand">True</property>
+                          <property name="hexpand">True</property>
+                        </object>
+                      </child>
+                    </object>
+                  </child>
+
+
+                  <!-- GtkLabel -->
+                  <child>
+                    <object class="GtkBox" id="search_and_button"> 
+                      <property name="orientation">horizontal</property>
+                      <property name="spacing">10</property>     
+                      <!--Search Box  -->
+                      <child>
+                        <object class="GtkEntry" id="search_label">
+                          <property name="placeholder-text">How to create a file in ubuntu ?</property>
+                          <property name="visible">True</property>
+                          <property name="width-request">350</property>
+                          <property name="height-request">50</property>
+                          <property name="halign">center</property>
+                          <property name="valign">start</property>
+                          <property name="vexpand">True</property>
+                          <property name="hexpand">True</property>
+                        </object>
+                      </child>
+
+                      <!-- search button -->
+                      <child>
+                        <object class="GtkButton" id="search_button">
+                          <property name="label">Ask</property>
+                        </object>
+                      </child>
+                    </object>
+                  </child>
+
+                </object>
+              </child>
+
+            </object>
+          </child>
+
+      </object>
+
+
+
+    </child>
+
+
+  </object>
+</interface>
